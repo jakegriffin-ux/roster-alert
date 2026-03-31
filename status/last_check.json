@@ -1,0 +1,9 @@
+{
+  "timestamp": null,
+  "result": "pending",
+  "steps": {
+    "schedule_check": {"status": "pending", "detail": "Waiting for first run"},
+    "roster_check": {"status": "pending", "detail": ""},
+    "ntfy_alert": {"status": "pending", "detail": ""}
+  }
+}

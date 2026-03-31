@@ -1,0 +1,43 @@
+name: Roster Check
+
+on:
+  schedule:
+    # Every 30 min, 15:00–23:30 UTC  (11 AM – 7:30 PM ET)
+    # Covers first-pitch-minus-1h05m for most MLB start times.
+    - cron: "*/30 15-23 * * *"
+    # Late-night window for West Coast evening games
+    - cron: "0,30 0-2 * * *"
+  workflow_dispatch: # manual trigger from GitHub UI
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run roster alert
+        env:
+          ESPN_S2:     ${{ secrets.ESPN_S2 }}
+          ESPN_SWID:   ${{ secrets.ESPN_SWID }}
+          LEAGUE_ID:   ${{ secrets.LEAGUE_ID }}
+          YEAR:        "2026"
+          NTFY_TOPIC:  ${{ secrets.NTFY_TOPIC }}
+        run: python roster_alert.py
+
+      - name: Commit status update
+        run: |
+          if [ -f status/last_check.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add status/last_check.json
+            git diff --cached --quiet || git commit -m "Update roster check status"
+            git push
+          fi
