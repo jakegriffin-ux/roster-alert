@@ -74,7 +74,9 @@ def check_rosters() -> tuple[list[dict], list[dict]]:
         ADD_ACTIONS = {"FA ADDED", "WAIVER ADDED", "TRADED"}
 
         for team in over_limit_teams:
-            latest = None
+            team_count = next(t["count"] for t in teams_data if t["name"] == team.team_name)
+            num_to_show = team_count - MAX_ROSTER  # 27 → 1, 28 → 2, etc.
+            recent_adds = []
             for activity in activities:
                 for act_team, action, player in activity.actions:
                     if (
@@ -84,17 +86,16 @@ def check_rosters() -> tuple[list[dict], list[dict]]:
                         and player
                     ):
                         dt = datetime.fromtimestamp(activity.date / 1000, tz=timezone.utc)
-                        latest = {
+                        recent_adds.append({
                             "player": str(player),
                             "date_str": dt.strftime("%-m/%-d/%Y"),
                             "type": action,
-                        }
+                        })
                         break
-                if latest:
+                if len(recent_adds) >= num_to_show:
                     break
 
-            team_count = next(t["count"] for t in teams_data if t["name"] == team.team_name)
-            violations.append({"team": team.team_name, "count": team_count, "latest_add": latest})
+            violations.append({"team": team.team_name, "count": team_count, "recent_adds": recent_adds})
 
     return teams_data, violations
 
@@ -183,21 +184,35 @@ def main() -> int:
     # ── Step 3: Send notification ─────────────────────────────────────────
     try:
         if all_clear:
-            title = "Roster Check — All Clear"
-            msg = f"All {len(teams_data)} teams at or under {MAX_ROSTER} players.\nFirst pitch: {game_str}"
-            tags = "white_check_mark,baseball"
-        else:
-            title = f"Roster Check — {len(violations)} Over Limit"
+            title = "Roster Check - All Clear"
+            max_name = max(len(t["name"]) for t in teams_data)
+            pad = max_name + 2
             lines = []
-            for v in violations:
-                line = f"- {v['team']}: {v['count']} players"
-                if v.get("latest_add"):
-                    la = v["latest_add"]
-                    line += f" (latest: {la['player']}, {la['type']} {la['date_str']})"
-                lines.append(line)
+            lines.append(f"{'#':>2}  {'TEAM':<{pad}} PLAYERS")
+            lines.append("-" * (pad + 14))
+            for i, t in enumerate(teams_data, 1):
+                lines.append(f"{i:>2}  {t['name']:<{pad}} {t['count']:>2}")
             lines.append(f"\nFirst pitch: {game_str}")
             msg = "\n".join(lines)
-            tags = "warning,baseball"
+            tags = "white_check_mark,baseball"
+        else:
+            title = f"Roster Check - {len(violations)} Over Limit"
+            max_name = max(len(t["name"]) for t in teams_data)
+            pad = max_name + 2
+            lines = []
+            lines.append(f"{'#':>2}  {'TEAM':<{pad}} PLAYERS")
+            lines.append("-" * (pad + 14))
+            for i, t in enumerate(teams_data, 1):
+                marker = " !!!" if t["over_limit"] else ""
+                lines.append(f"{i:>2}  {t['name']:<{pad}} {t['count']:>2}{marker}")
+            for v in violations:
+                lines.append("")
+                lines.append(f"Latest adds for {v['team']}:")
+                for add in v.get("recent_adds", []):
+                    lines.append(f"  {add['player']} - {add['type']} {add['date_str']}")
+            lines.append(f"\nFirst pitch: {game_str}")
+            msg = "\n".join(lines)
+            tags = "biohazard,baseball"
 
         send_ntfy(ntfy_topic, msg, title, tags)
         steps["ntfy_alert"] = {"status": "success", "detail": "Notification sent"}
