@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Roster Alert — runs via GitHub Actions every 30 min during game hours.
+Roster Alert — runs via GitHub Actions every 15 min during game hours.
 1. Checks MLB schedule for today's first game time.
-2. If current time is within the check window (first pitch - 1h5m ± 15min),
-   runs a roster check against ESPN Fantasy.
+2. If current time is within the check window (first pitch - 1h5m ± 25min),
+   and we haven't already sent today, runs a roster check against ESPN Fantasy.
 3. Sends an Ntfy push notification with the result.
 4. Writes status/last_check.json so the local dashboard can show step results.
 """
@@ -19,7 +19,7 @@ from espn_api.baseball import League
 
 # ── Config ────────────────────────────────────────────────────────────────────
 MAX_ROSTER = 26
-WINDOW_MINUTES = 15          # ±15 min of target time
+WINDOW_MINUTES = 25          # ±25 min of target time
 LEAD_TIME = timedelta(hours=1, minutes=5)
 ET = timezone(timedelta(hours=-4))
 
@@ -114,6 +114,21 @@ def send_ntfy(topic: str, message: str, title: str, tags: str) -> None:
 
 # ── Status file ───────────────────────────────────────────────────────────────
 
+def already_sent_today() -> bool:
+    """Return True if we already sent a notification today (UTC date)."""
+    try:
+        with open("status/last_check.json") as f:
+            data = json.load(f)
+        if data.get("result") in ("all_clear", "violations"):
+            ts = data.get("timestamp")
+            if ts:
+                last_dt = datetime.fromisoformat(ts)
+                return last_dt.date() == datetime.now(timezone.utc).date()
+    except Exception:
+        pass
+    return False
+
+
 def write_status(steps: dict, result: str) -> None:
     status = {
         "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -161,6 +176,10 @@ def main() -> int:
     if diff_min > WINDOW_MINUTES:
         print(f"Not in window. Target: {target.isoformat()}, diff: {diff_min:.0f}min")
         return 0  # silent exit — don't write status for skipped runs
+
+    if already_sent_today():
+        print("Already sent today — skipping duplicate.")
+        return 0
 
     print(f"In window (diff: {diff_min:.1f}min). Running roster check.")
 

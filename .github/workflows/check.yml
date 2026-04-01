@@ -2,11 +2,11 @@ name: Roster Check
 
 on:
   schedule:
-    # Every 30 min, 15:00–23:30 UTC  (11 AM – 7:30 PM ET)
+    # Every 15 min, 14:00–23:45 UTC  (10 AM – 7:45 PM ET)
     # Covers first-pitch-minus-1h05m for most MLB start times.
-    - cron: "*/30 15-23 * * *"
+    - cron: "*/15 14-23 * * *"
     # Late-night window for West Coast evening games
-    - cron: "0,30 0-2 * * *"
+    - cron: "0,15,30,45 0-2 * * *"
   workflow_dispatch: # manual trigger from GitHub UI
 
 permissions:
