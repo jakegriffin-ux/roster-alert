@@ -1,9 +1,72 @@
 {
-  "timestamp": null,
-  "result": "pending",
+  "timestamp": "2026-04-02T16:45:22+00:00",
+  "result": "all_clear",
   "steps": {
-    "schedule_check": {"status": "pending", "detail": "Waiting for first run"},
-    "roster_check": {"status": "pending", "detail": ""},
-    "ntfy_alert": {"status": "pending", "detail": ""}
+    "schedule_check": {
+      "status": "success",
+      "detail": "First pitch: 2:10 PM ET"
+    },
+    "roster_check": {
+      "status": "success",
+      "detail": "All clear \u2014 10 teams checked",
+      "teams": [
+        {
+          "name": "A Drive Into Deep Left Field",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "BigBlueNation",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Bunt Pirates",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "Burly Biscuits",
+          "count": 25,
+          "over_limit": false
+        },
+        {
+          "name": "Daddy Hacks",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Gage's Mom : Baseball Edition",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Hendo Slammers ",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Texas Thrillbillies",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "The Nacho Nine",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "The Roman Empire",
+          "count": 26,
+          "over_limit": false
+        }
+      ],
+      "violations": [],
+      "all_clear": true
+    },
+    "ntfy_alert": {
+      "status": "success",
+      "detail": "Notification sent"
+    }
   }
 }
