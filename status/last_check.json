@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-02T16:45:22+00:00",
-  "result": "all_clear",
+  "timestamp": "2026-04-03T15:58:26+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 2:10 PM ET"
+      "detail": "First pitch: 1:05 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "All clear \u2014 10 teams checked",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
@@ -32,8 +32,8 @@
         },
         {
           "name": "Daddy Hacks",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "Gage's Mom : Baseball Edition",
@@ -61,8 +61,20 @@
           "over_limit": false
         }
       ],
-      "violations": [],
-      "all_clear": true
+      "violations": [
+        {
+          "team": "Daddy Hacks",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Kyle Isbel",
+              "date_str": "4/3/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
       "status": "success",
