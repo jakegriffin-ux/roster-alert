@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-05T15:47:00+00:00",
-  "result": "all_clear",
+  "timestamp": "2026-04-06T19:18:12+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 1:10 PM ET"
+      "detail": "First pitch: 4:10 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "All clear \u2014 10 teams checked",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
@@ -42,8 +42,8 @@
         },
         {
           "name": "Hendo Slammers ",
-          "count": 26,
-          "over_limit": false
+          "count": 28,
+          "over_limit": true
         },
         {
           "name": "Texas Thrillbillies",
@@ -61,8 +61,25 @@
           "over_limit": false
         }
       ],
-      "violations": [],
-      "all_clear": true
+      "violations": [
+        {
+          "team": "Hendo Slammers ",
+          "count": 28,
+          "recent_adds": [
+            {
+              "player": "Max Muncy",
+              "date_str": "4/6/2026",
+              "type": "FA ADDED"
+            },
+            {
+              "player": "Gregory Soto",
+              "date_str": "4/6/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
       "status": "success",
