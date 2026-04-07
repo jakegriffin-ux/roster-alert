@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-06T19:18:12+00:00",
+  "timestamp": "2026-04-07T16:17:39+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 4:10 PM ET"
+      "detail": "First pitch: 1:10 PM ET"
     },
     "roster_check": {
       "status": "success",
