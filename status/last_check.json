@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-04-09T15:13:39+00:00",
+  "timestamp": "2026-04-10T17:32:37+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 12:10 PM ET"
+      "detail": "First pitch: 2:20 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "1 team(s) over limit",
+      "detail": "2 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "BigBlueNation",
@@ -22,7 +22,7 @@
         },
         {
           "name": "Bunt Pirates",
-          "count": 23,
+          "count": 24,
           "over_limit": false
         },
         {
@@ -63,17 +63,28 @@
       ],
       "violations": [
         {
+          "team": "A Drive Into Deep Left Field",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Taj Bradley",
+              "date_str": "4/9/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        },
+        {
           "team": "Hendo Slammers ",
           "count": 28,
           "recent_adds": [
             {
-              "player": "Mark Vientos",
-              "date_str": "4/9/2026",
+              "player": "Jeffrey Springs",
+              "date_str": "4/10/2026",
               "type": "FA ADDED"
             },
             {
-              "player": "Max Muncy",
-              "date_str": "4/6/2026",
+              "player": "Mark Vientos",
+              "date_str": "4/9/2026",
               "type": "FA ADDED"
             }
           ]
