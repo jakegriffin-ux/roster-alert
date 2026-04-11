@@ -1,24 +1,24 @@
 {
-  "timestamp": "2026-04-10T17:32:37+00:00",
+  "timestamp": "2026-04-11T15:46:57+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 2:20 PM ET"
+      "detail": "First pitch: 1:05 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "2 team(s) over limit",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
-          "count": 27,
-          "over_limit": true
+          "count": 26,
+          "over_limit": false
         },
         {
           "name": "BigBlueNation",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "Bunt Pirates",
@@ -42,8 +42,8 @@
         },
         {
           "name": "Hendo Slammers ",
-          "count": 28,
-          "over_limit": true
+          "count": 26,
+          "over_limit": false
         },
         {
           "name": "Texas Thrillbillies",
@@ -63,27 +63,11 @@
       ],
       "violations": [
         {
-          "team": "A Drive Into Deep Left Field",
+          "team": "BigBlueNation",
           "count": 27,
           "recent_adds": [
             {
-              "player": "Taj Bradley",
-              "date_str": "4/9/2026",
-              "type": "FA ADDED"
-            }
-          ]
-        },
-        {
-          "team": "Hendo Slammers ",
-          "count": 28,
-          "recent_adds": [
-            {
-              "player": "Jeffrey Springs",
-              "date_str": "4/10/2026",
-              "type": "FA ADDED"
-            },
-            {
-              "player": "Mark Vientos",
+              "player": "Mitch Keller",
               "date_str": "4/9/2026",
               "type": "FA ADDED"
             }
