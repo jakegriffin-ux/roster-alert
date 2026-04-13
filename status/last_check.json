@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-12T16:30:27+00:00",
+  "timestamp": "2026-04-13T18:47:52+00:00",
   "result": "all_clear",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 1:35 PM ET"
+      "detail": "First pitch: 4:10 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -17,12 +17,12 @@
         },
         {
           "name": "BigBlueNation",
-          "count": 25,
+          "count": 26,
           "over_limit": false
         },
         {
           "name": "Bunt Pirates",
-          "count": 24,
+          "count": 23,
           "over_limit": false
         },
         {
@@ -57,7 +57,7 @@
         },
         {
           "name": "The Roman Empire",
-          "count": 25,
+          "count": 26,
           "over_limit": false
         }
       ],
