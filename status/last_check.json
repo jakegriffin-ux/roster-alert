@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-14T21:44:51+00:00",
-  "result": "all_clear",
+  "timestamp": "2026-04-16T15:18:21+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 6:35 PM ET"
+      "detail": "First pitch: 12:35 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "All clear \u2014 10 teams checked",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
@@ -37,7 +37,7 @@
         },
         {
           "name": "Gage's Mom : Baseball Edition",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
@@ -57,12 +57,24 @@
         },
         {
           "name": "The Roman Empire",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         }
       ],
-      "violations": [],
-      "all_clear": true
+      "violations": [
+        {
+          "team": "The Roman Empire",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Dalton Rushing",
+              "date_str": "4/16/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
       "status": "success",
