@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-18T16:37:52+00:00",
-  "result": "all_clear",
+  "timestamp": "2026-04-19T16:37:31+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
@@ -8,7 +8,7 @@
     },
     "roster_check": {
       "status": "success",
-      "detail": "All clear \u2014 10 teams checked",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
@@ -37,8 +37,8 @@
         },
         {
           "name": "Gage's Mom : Baseball Edition",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "Hendo Slammers ",
@@ -61,8 +61,20 @@
           "over_limit": false
         }
       ],
-      "violations": [],
-      "all_clear": true
+      "violations": [
+        {
+          "team": "Gage's Mom : Baseball Edition",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Luke Raley",
+              "date_str": "4/19/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
       "status": "success",
