@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-24T21:25:13+00:00",
+  "timestamp": "2026-04-25T14:35:51+00:00",
   "result": "all_clear",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 6:40 PM ET"
+      "detail": "First pitch: 12:05 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -17,12 +17,12 @@
         },
         {
           "name": "BigBlueNation",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
           "name": "Bunt Pirates",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
