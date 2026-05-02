@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-29T15:51:49+00:00",
+  "timestamp": "2026-05-02T16:10:36+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 1:10 PM ET"
+      "detail": "First pitch: 1:35 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -22,7 +22,7 @@
         },
         {
           "name": "Bunt Pirates",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
@@ -37,7 +37,7 @@
         },
         {
           "name": "Gage's Mom : Baseball Edition",
-          "count": 27,
+          "count": 28,
           "over_limit": true
         },
         {
@@ -57,15 +57,20 @@
         },
         {
           "name": "The Roman Empire",
-          "count": 25,
+          "count": 26,
           "over_limit": false
         }
       ],
       "violations": [
         {
           "team": "Gage's Mom : Baseball Edition",
-          "count": 27,
+          "count": 28,
           "recent_adds": [
+            {
+              "player": "Ramon Laureano",
+              "date_str": "5/1/2026",
+              "type": "FA ADDED"
+            },
             {
               "player": "Keider Montero",
               "date_str": "4/21/2026",
