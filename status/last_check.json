@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-05-15T21:31:40+00:00",
+  "timestamp": "2026-05-16T15:48:20+00:00",
   "result": "all_clear",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 6:40 PM ET"
+      "detail": "First pitch: 1:10 PM ET"
     },
     "roster_check": {
       "status": "success",
