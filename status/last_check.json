@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-05-18T21:35:56+00:00",
-  "result": "all_clear",
+  "timestamp": "2026-05-23T15:54:19+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 6:40 PM ET"
+      "detail": "First pitch: 1:10 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "All clear \u2014 10 teams checked",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
@@ -17,12 +17,12 @@
         },
         {
           "name": "BigBlueNation",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "Bunt Pirates",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
@@ -47,7 +47,7 @@
         },
         {
           "name": "The Infirmiry",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
@@ -61,8 +61,20 @@
           "over_limit": false
         }
       ],
-      "violations": [],
-      "all_clear": true
+      "violations": [
+        {
+          "team": "BigBlueNation",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "William Contreras",
+              "date_str": "5/21/2026",
+              "type": "TRADED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
       "status": "success",
