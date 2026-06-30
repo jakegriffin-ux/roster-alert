@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-06-28T16:35:59+00:00",
+  "timestamp": "2026-06-30T21:53:04+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 1:35 PM ET"
+      "detail": "First pitch: 6:35 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -12,8 +12,8 @@
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
-          "count": 27,
-          "over_limit": true
+          "count": 26,
+          "over_limit": false
         },
         {
           "name": "BigBlueNation",
@@ -37,8 +37,8 @@
         },
         {
           "name": "Hendo Slammers ",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "Texas Thrillbillies",
@@ -57,18 +57,18 @@
         },
         {
           "name": "iLuvNickKurtz",
-          "count": 25,
+          "count": 26,
           "over_limit": false
         }
       ],
       "violations": [
         {
-          "team": "A Drive Into Deep Left Field",
+          "team": "Hendo Slammers ",
           "count": 27,
           "recent_adds": [
             {
-              "player": "Tyler Glasnow",
-              "date_str": "6/21/2026",
+              "player": "Luke Weaver",
+              "date_str": "6/27/2026",
               "type": "FA ADDED"
             }
           ]
