@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-07-03T18:38:03+00:00",
+  "timestamp": "2026-07-05T15:05:05+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 4:05 PM ET"
+      "detail": "First pitch: 12:30 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "1 team(s) over limit",
+      "detail": "2 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
@@ -57,8 +57,8 @@
         },
         {
           "name": "iLuvNickKurtz",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         }
       ],
       "violations": [
@@ -69,6 +69,17 @@
             {
               "player": "Luke Weaver",
               "date_str": "6/27/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        },
+        {
+          "team": "iLuvNickKurtz",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Kyle Stowers",
+              "date_str": "7/5/2026",
               "type": "FA ADDED"
             }
           ]
