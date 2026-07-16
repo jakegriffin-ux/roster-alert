@@ -1,18 +1,95 @@
 {
-  "timestamp": "2026-07-16T01:49:50+00:00",
-  "result": "off_day",
+  "timestamp": "2026-07-16T21:13:35+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "Off day \u2014 no games scheduled"
+      "detail": "First pitch: 6:10 PM ET"
     },
     "roster_check": {
-      "status": "skipped",
-      "detail": ""
+      "status": "success",
+      "detail": "2 team(s) over limit",
+      "teams": [
+        {
+          "name": "A Drive Into Deep Left Field",
+          "count": 27,
+          "over_limit": true
+        },
+        {
+          "name": "BigBlueNation",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Bunt Pirates",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Burly Biscuits",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "Gage's Mom : Baseball Edition",
+          "count": 27,
+          "over_limit": true
+        },
+        {
+          "name": "Hendo Slammers ",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Texas Thrillbillies",
+          "count": 25,
+          "over_limit": false
+        },
+        {
+          "name": "The Infirmiry",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "The Nacho Nine",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "iLuvNickKurtz",
+          "count": 26,
+          "over_limit": false
+        }
+      ],
+      "violations": [
+        {
+          "team": "A Drive Into Deep Left Field",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Sean Burke",
+              "date_str": "7/11/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        },
+        {
+          "team": "Gage's Mom : Baseball Edition",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Jake McCarthy",
+              "date_str": "6/29/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
-      "status": "skipped",
-      "detail": ""
+      "status": "success",
+      "detail": "Notification sent"
     }
   }
 }
