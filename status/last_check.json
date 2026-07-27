@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-07-26T14:55:51+00:00",
+  "timestamp": "2026-07-27T17:53:20+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 12:15 PM ET"
+      "detail": "First pitch: 2:35 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "2 team(s) over limit",
+      "detail": "1 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
-          "count": 25,
+          "count": 24,
           "over_limit": false
         },
         {
@@ -47,8 +47,8 @@
         },
         {
           "name": "The Infirmiry",
-          "count": 27,
-          "over_limit": true
+          "count": 26,
+          "over_limit": false
         },
         {
           "name": "The Nacho Nine",
@@ -69,17 +69,6 @@
             {
               "player": "Jake McCarthy",
               "date_str": "6/29/2026",
-              "type": "FA ADDED"
-            }
-          ]
-        },
-        {
-          "team": "The Infirmiry",
-          "count": 27,
-          "recent_adds": [
-            {
-              "player": "Carter Jensen",
-              "date_str": "7/21/2026",
               "type": "FA ADDED"
             }
           ]
