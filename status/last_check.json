@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-01T17:51:44+00:00",
+  "timestamp": "2026-08-02T16:45:44+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 3:07 PM ET"
+      "detail": "First pitch: 1:35 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -37,7 +37,7 @@
         },
         {
           "name": "Hendo Slammers ",
-          "count": 24,
+          "count": 25,
           "over_limit": false
         },
         {
