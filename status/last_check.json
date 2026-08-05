@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03T21:57:43+00:00",
+  "timestamp": "2026-08-05T17:18:26+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 6:40 PM ET"
+      "detail": "First pitch: 2:10 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -37,7 +37,7 @@
         },
         {
           "name": "Hendo Slammers ",
-          "count": 25,
+          "count": 24,
           "over_limit": false
         },
         {
@@ -47,7 +47,7 @@
         },
         {
           "name": "The Infirmiry",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
@@ -57,7 +57,7 @@
         },
         {
           "name": "iLuvNickKurtz",
-          "count": 24,
+          "count": 26,
           "over_limit": false
         }
       ],
@@ -78,8 +78,8 @@
           "count": 27,
           "recent_adds": [
             {
-              "player": "Reid Detmers",
-              "date_str": "7/30/2026",
+              "player": "Kevin Gausman",
+              "date_str": "8/4/2026",
               "type": "FA ADDED"
             }
           ]
