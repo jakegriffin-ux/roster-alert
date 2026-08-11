@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10T21:55:32+00:00",
+  "timestamp": "2026-08-11T21:27:01+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 7:07 PM ET"
+      "detail": "First pitch: 6:40 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -17,7 +17,7 @@
         },
         {
           "name": "BigBlueNation",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
