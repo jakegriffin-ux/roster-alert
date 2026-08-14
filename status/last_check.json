@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13T15:48:35+00:00",
+  "timestamp": "2026-08-14T17:28:13+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 1:10 PM ET"
+      "detail": "First pitch: 2:20 PM ET"
     },
     "roster_check": {
       "status": "success",
@@ -37,17 +37,17 @@
         },
         {
           "name": "Hendo Slammers ",
-          "count": 24,
-          "over_limit": false
-        },
-        {
-          "name": "Texas Thrillbillies",
           "count": 27,
           "over_limit": true
         },
         {
+          "name": "Texas Thrillbillies",
+          "count": 25,
+          "over_limit": false
+        },
+        {
           "name": "The Infirmiry",
-          "count": 26,
+          "count": 25,
           "over_limit": false
         },
         {
@@ -63,17 +63,6 @@
       ],
       "violations": [
         {
-          "team": "Texas Thrillbillies",
-          "count": 27,
-          "recent_adds": [
-            {
-              "player": "Peter Lambert",
-              "date_str": "8/6/2026",
-              "type": "FA ADDED"
-            }
-          ]
-        },
-        {
           "team": "Gage's Mom : Baseball Edition",
           "count": 27,
           "recent_adds": [
@@ -81,6 +70,17 @@
               "player": "Kevin Gausman",
               "date_str": "8/4/2026",
               "type": "FA ADDED"
+            }
+          ]
+        },
+        {
+          "team": "Hendo Slammers ",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "James Wood",
+              "date_str": "8/13/2026",
+              "type": "TRADED"
             }
           ]
         }
