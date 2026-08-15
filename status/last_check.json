@@ -1,19 +1,19 @@
 {
-  "timestamp": "2026-08-14T17:28:13+00:00",
+  "timestamp": "2026-08-15T15:54:07+00:00",
   "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "First pitch: 2:20 PM ET"
+      "detail": "First pitch: 1:10 PM ET"
     },
     "roster_check": {
       "status": "success",
-      "detail": "2 team(s) over limit",
+      "detail": "3 team(s) over limit",
       "teams": [
         {
           "name": "A Drive Into Deep Left Field",
-          "count": 26,
-          "over_limit": false
+          "count": 27,
+          "over_limit": true
         },
         {
           "name": "BigBlueNation",
@@ -47,7 +47,7 @@
         },
         {
           "name": "The Infirmiry",
-          "count": 25,
+          "count": 24,
           "over_limit": false
         },
         {
@@ -62,6 +62,17 @@
         }
       ],
       "violations": [
+        {
+          "team": "A Drive Into Deep Left Field",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Abimelec Ortiz",
+              "date_str": "8/14/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        },
         {
           "team": "Gage's Mom : Baseball Edition",
           "count": 27,
