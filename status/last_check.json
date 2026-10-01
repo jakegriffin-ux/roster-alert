@@ -1,18 +1,84 @@
 {
-  "timestamp": "2026-09-29T03:26:37+00:00",
-  "result": "off_day",
+  "timestamp": "2026-10-01T23:09:02+00:00",
+  "result": "violations",
   "steps": {
     "schedule_check": {
       "status": "success",
-      "detail": "Off day \u2014 no games scheduled"
+      "detail": "First pitch: 8:00 PM ET"
     },
     "roster_check": {
-      "status": "skipped",
-      "detail": ""
+      "status": "success",
+      "detail": "1 team(s) over limit",
+      "teams": [
+        {
+          "name": "A Drive Into Deep Left Field",
+          "count": 23,
+          "over_limit": false
+        },
+        {
+          "name": "BigBlueNation",
+          "count": 25,
+          "over_limit": false
+        },
+        {
+          "name": "Bunt Pirates",
+          "count": 25,
+          "over_limit": false
+        },
+        {
+          "name": "Burly Biscuits",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "Gage's Mom : Baseball Edition",
+          "count": 27,
+          "over_limit": true
+        },
+        {
+          "name": "Hendo Slammers ",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "Texas Thrillbillies",
+          "count": 26,
+          "over_limit": false
+        },
+        {
+          "name": "The Infirmiry",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "The Nacho Nine",
+          "count": 24,
+          "over_limit": false
+        },
+        {
+          "name": "iLuvNickKurtz",
+          "count": 25,
+          "over_limit": false
+        }
+      ],
+      "violations": [
+        {
+          "team": "Gage's Mom : Baseball Edition",
+          "count": 27,
+          "recent_adds": [
+            {
+              "player": "Josue De Paula",
+              "date_str": "9/11/2026",
+              "type": "FA ADDED"
+            }
+          ]
+        }
+      ],
+      "all_clear": false
     },
     "ntfy_alert": {
-      "status": "skipped",
-      "detail": ""
+      "status": "success",
+      "detail": "Notification sent"
     }
   }
 }
